@@ -3,7 +3,7 @@
  * Plugin Name: Custom Flex Posts - Widget and Gutenberg Block
  * Plugin URI:  
  * Description: A widget to display posts adn custom post types with thumbnails in various layouts for any widget area.
- * Version:     1.0.0
+ * Version:     1.3.0
  * Author:      Colin Fahrion
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Current plugin version.
  */
-define( 'CUSTOM_FLEX_POSTS_VERSION', '1.0.0' );
+define( 'CUSTOM_FLEX_POSTS_VERSION', '1.3.0' );
 
 /**
  * Plugin directory and url

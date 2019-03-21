@@ -66,8 +66,8 @@ This plugin has been tested and works with at least PHP 5.3 installed in your en
 
 == Changelog ==
 
-= 1.0.0 =
-* Changed to be titled Custom Post types and not interfer with original plugin
-* Upgraded to allow for custom post types
+= 1.3.0 =
+* Changed from Flex Posts to be titled Custom Post types and not interfer with original plugin
+* Upgraded to allow for custom post types with selector in inspector controls
 
 == Upgrade Notice ==
