@@ -140,7 +140,7 @@ function custom_flex_posts_register_block() {
 		)
 	);
 }
-add_action( 'init', 'custom_flex_posts_register_block' );
+add_action( 'wp_loaded', 'custom_flex_posts_register_block' );
 
 /**
  * Render block
