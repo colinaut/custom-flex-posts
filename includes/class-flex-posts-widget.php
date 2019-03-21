@@ -53,7 +53,7 @@ class Flex_Posts_Widget extends WP_Widget {
 				<?php if ( 'text' === $field['type'] ) : ?>
 
 					<?php
-					flex_posts_input(
+					custom_flex_posts_input(
 						array(
 							'type'  => 'text',
 							'name'  => $name,
@@ -67,7 +67,7 @@ class Flex_Posts_Widget extends WP_Widget {
 				<?php elseif ( 'number' === $field['type'] ) : ?>
 
 					<?php
-					flex_posts_input(
+					custom_flex_posts_input(
 						array(
 							'type'  => 'number',
 							'name'  => $name,
@@ -84,7 +84,7 @@ class Flex_Posts_Widget extends WP_Widget {
 				<?php elseif ( 'textarea' === $field['type'] ) : ?>
 
 					<?php
-					flex_posts_textarea(
+					custom_flex_posts_textarea(
 						array(
 							'name'  => $name,
 							'id'    => $id,
@@ -97,7 +97,7 @@ class Flex_Posts_Widget extends WP_Widget {
 				<?php elseif ( 'select' === $field['type'] ) : ?>
 
 					<?php
-					flex_posts_select(
+					custom_flex_posts_select(
 						array(
 							'name'       => $name,
 							'id'         => $id,
@@ -115,7 +115,7 @@ class Flex_Posts_Widget extends WP_Widget {
 				<?php elseif ( 'checkbox' === $field['type'] ) : ?>
 
 					<?php
-					flex_posts_input(
+					custom_flex_posts_input(
 						array(
 							'type'    => 'checkbox',
 							'name'    => $name,
@@ -140,7 +140,7 @@ class Flex_Posts_Widget extends WP_Widget {
 							'id'              => $id,
 							'class'           => 'widefat',
 							'hierarchical'    => 1,
-							'show_option_all' => esc_html__( 'All Categories', 'flex_posts' ),
+							'show_option_all' => esc_html__( 'All Categories', 'custom_flex_posts' ),
 							'selected'        => $value,
 						)
 					);

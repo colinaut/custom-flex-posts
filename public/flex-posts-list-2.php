@@ -18,11 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="fp-col fp-post">
 			<div class="fp-media">
-				<?php flex_posts_thumbnail( $medium_size ); ?>
+				<?php custom_flex_posts_thumbnail( $medium_size ); ?>
 			</div>
 			<div class="fp-body">
 				<?php if ( ! empty( $instance['show_categories'] ) ) : ?>
-					<?php flex_posts_categories_meta(); ?>
+					<?php custom_flex_posts_categories_meta(); ?>
 				<?php endif; ?>
 
 				<h4 class="fp-title">
@@ -30,11 +30,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</h4>
 
 				<div class="fp-meta">
-					<?php flex_posts_meta( $instance ); ?>
+					<?php custom_flex_posts_meta( $instance ); ?>
 				</div>
 
 				<?php if ( ! empty( $instance['show_excerpt'] ) ) : ?>
-					<div class="fp-excerpt"><?php flex_posts_excerpt(); ?></div>
+					<div class="fp-excerpt"><?php custom_flex_posts_excerpt(); ?></div>
 				<?php endif; ?>
 			</div>
 		</div>

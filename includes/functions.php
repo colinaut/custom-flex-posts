@@ -12,15 +12,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Register style sheet
  */
-function flex_posts_register_style() {
+function custom_flex_posts_register_style() {
 	wp_register_style(
 		'flex-posts',
-		FLEX_POSTS_URL . '/public/css/flex-posts.css',
+		CUSTOM_FLEX_POSTS_URL . '/public/css/flex-posts.css',
 		array(),
-		FLEX_POSTS_VERSION
+		CUSTOM_FLEX_POSTS_VERSION
 	);
 }
-add_action( 'init', 'flex_posts_register_style' );
+add_action( 'init', 'custom_flex_posts_register_style' );
 
 /**
  * Get args for WP Query
@@ -28,7 +28,7 @@ add_action( 'init', 'flex_posts_register_style' );
  * @param  array $instance Attributes.
  * @return array Args
  */
-function flex_posts_get_query_args( $instance ) {
+function custom_flex_posts_get_query_args( $instance ) {
 	$args['orderby'] = 'date';
 	$args['order']   = 'desc';
 	if ( ! empty( $instance['order_by'] ) ) {
@@ -77,8 +77,8 @@ function flex_posts_get_query_args( $instance ) {
  *
  * @param array $instance Attributes.
  */
-function flex_posts_display( $instance ) {
-	$args = apply_filters( 'flex_posts_list_args', flex_posts_get_query_args( $instance ) );
+function custom_flex_posts_display( $instance ) {
+	$args = apply_filters( 'custom_flex_posts_list_args', custom_flex_posts_get_query_args( $instance ) );
 
 	$query = new WP_Query( $args );
 
@@ -87,13 +87,13 @@ function flex_posts_display( $instance ) {
 		$layout = absint( $instance['layout'] );
 	}
 
-	$medium_size    = apply_filters( 'flex_posts_medium_size', '400x250-crop', $instance );
-	$thumbnail_size = apply_filters( 'flex_posts_thumbnail_size', 'thumbnail', $instance );
+	$medium_size    = apply_filters( 'custom_flex_posts_medium_size', '400x250-crop', $instance );
+	$thumbnail_size = apply_filters( 'custom_flex_posts_thumbnail_size', 'thumbnail', $instance );
 
 	$file     = 'flex-posts-list-' . $layout . '.php';
 	$template = locate_template( $file );
 	if ( empty( $template ) ) {
-		$template = FLEX_POSTS_DIR . 'public/' . $file;
+		$template = CUSTOM_FLEX_POSTS_DIR . 'public/' . $file;
 	}
 
 	if ( ! file_exists( $template ) ) {

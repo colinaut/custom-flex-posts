@@ -35,7 +35,7 @@ class Flex_Posts_List extends Flex_Posts_Widget {
 	 * Get form fields
 	 */
 	public function get_fields() {
-		return apply_filters( 'flex_posts_list_fields', parent::get_fields() );
+		return apply_filters( 'custom_flex_posts_list_fields', parent::get_fields() );
 	}
 
 	/**
@@ -44,6 +44,6 @@ class Flex_Posts_List extends Flex_Posts_Widget {
 	 * @param array $instance Saved values from database.
 	 */
 	public function front( $instance ) {
-		flex_posts_display( $instance );
+		custom_flex_posts_display( $instance );
 	}
 }

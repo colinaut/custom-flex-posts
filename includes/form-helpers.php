@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param array $args Array of arguments to control the input element.
  */
-function flex_posts_input( $args = array() ) {
+function custom_flex_posts_input( $args = array() ) {
 	$defaults = array(
 		'type'  => 'text',
 		'name'  => '',
@@ -60,7 +60,7 @@ function flex_posts_input( $args = array() ) {
  *
  * @param array $args Array of arguments to control the textarea element.
  */
-function flex_posts_textarea( $args = array() ) {
+function custom_flex_posts_textarea( $args = array() ) {
 	$defaults = array(
 		'name'  => '',
 		'id'    => '',
@@ -88,7 +88,7 @@ function flex_posts_textarea( $args = array() ) {
  *
  * @param array $args Array of arguments to control the select element.
  */
-function flex_posts_select( $args = array() ) {
+function custom_flex_posts_select( $args = array() ) {
 	$defaults = array(
 		'name'        => '',
 		'selected'    => '',

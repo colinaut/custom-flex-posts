@@ -9,34 +9,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'flex_posts_meta' ) ) {
+if ( ! function_exists( 'custom_flex_posts_meta' ) ) {
 	/**
 	 * Display meta information.
 	 *
 	 * @param array $instance Widget settings.
 	 */
-	function flex_posts_meta( $instance ) {
-		do_action( 'flex_posts_meta_start' );
+	function custom_flex_posts_meta( $instance ) {
+		do_action( 'custom_flex_posts_meta_start' );
 
 		if ( ! empty( $instance['show_author'] ) ) {
-			flex_posts_author_meta();
+			custom_flex_posts_author_meta();
 		}
 		if ( ! empty( $instance['show_date'] ) ) {
-			flex_posts_date_meta();
+			custom_flex_posts_date_meta();
 		}
 		if ( ! empty( $instance['show_comments'] ) ) {
-			flex_posts_comments_meta();
+			custom_flex_posts_comments_meta();
 		}
 
-		do_action( 'flex_posts_meta_end' );
+		do_action( 'custom_flex_posts_meta_end' );
 	}
 }
 
-if ( ! function_exists( 'flex_posts_author_meta' ) ) {
+if ( ! function_exists( 'custom_flex_posts_author_meta' ) ) {
 	/**
 	 * Display author meta.
 	 */
-	function flex_posts_author_meta() {
+	function custom_flex_posts_author_meta() {
 		?>
 		<span class="fp-author">
 			<span class="author vcard">
@@ -49,11 +49,11 @@ if ( ! function_exists( 'flex_posts_author_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'flex_posts_date_meta' ) ) {
+if ( ! function_exists( 'custom_flex_posts_date_meta' ) ) {
 	/**
 	 * Display date meta.
 	 */
-	function flex_posts_date_meta() {
+	function custom_flex_posts_date_meta() {
 		?>
 		<span class="fp-date">
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
@@ -66,11 +66,11 @@ if ( ! function_exists( 'flex_posts_date_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'flex_posts_comments_meta' ) ) {
+if ( ! function_exists( 'custom_flex_posts_comments_meta' ) ) {
 	/**
 	 * Display comments meta.
 	 */
-	function flex_posts_comments_meta() {
+	function custom_flex_posts_comments_meta() {
 		?>
 		<span class="fp-comments">
 			<?php comments_popup_link(); ?>
@@ -79,11 +79,11 @@ if ( ! function_exists( 'flex_posts_comments_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'flex_posts_categories_meta' ) ) {
+if ( ! function_exists( 'custom_flex_posts_categories_meta' ) ) {
 	/**
 	 * Display categories meta.
 	 */
-	function flex_posts_categories_meta() {
+	function custom_flex_posts_categories_meta() {
 		?>
 		<span class="fp-categories">
 			<?php the_category( ', ' ); ?>
@@ -92,14 +92,14 @@ if ( ! function_exists( 'flex_posts_categories_meta' ) ) {
 	}
 }
 
-if ( ! function_exists( 'flex_posts_thumbnail' ) ) {
+if ( ! function_exists( 'custom_flex_posts_thumbnail' ) ) {
 	/**
 	 * Display categories meta.
 	 *
 	 * @param string $size Image size.
 	 */
-	function flex_posts_thumbnail( $size ) {
-		$default_image = apply_filters( 'flex_posts_default_image', FLEX_POSTS_URL . '/public/images/default.png' );
+	function custom_flex_posts_thumbnail( $size ) {
+		$default_image = apply_filters( 'custom_flex_posts_default_image', CUSTOM_FLEX_POSTS_URL . '/public/images/default.png' );
 		?>
 		<a class="fp-thumbnail" href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) : ?>
@@ -112,13 +112,13 @@ if ( ! function_exists( 'flex_posts_thumbnail' ) ) {
 	}
 }
 
-if ( ! function_exists( 'flex_posts_excerpt' ) ) {
+if ( ! function_exists( 'custom_flex_posts_excerpt' ) ) {
 	/**
 	 * Display excerpt.
 	 *
 	 * @param int $length Number of words.
 	 */
-	function flex_posts_excerpt( $length = 15 ) {
+	function custom_flex_posts_excerpt( $length = 15 ) {
 		$post = get_post( get_the_ID() );
 		$text = apply_filters( 'the_excerpt', $post->post_excerpt );
 		if ( empty( $text ) ) {

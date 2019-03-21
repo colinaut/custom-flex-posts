@@ -108,7 +108,7 @@
 							{
 								label: __( 'Filter by category', 'flex-posts' ),
 								value: attr.cat,
-								options: flex_posts.categories,
+								options: custom_flex_posts.categories,
 								onChange: function( val ) {
 									props.setAttributes( { cat: val } )
 								}

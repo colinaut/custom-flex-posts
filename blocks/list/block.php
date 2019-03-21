@@ -12,20 +12,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Enqueue style sheet
  */
-function flex_posts_enqueue_block_assets() {
+function custom_flex_posts_enqueue_block_assets() {
 	wp_enqueue_style( 'flex-posts' );
 }
-add_action( 'enqueue_block_assets', 'flex_posts_enqueue_block_assets' );
+add_action( 'enqueue_block_assets', 'custom_flex_posts_enqueue_block_assets' );
 
 /**
  * Register block
  */
-function flex_posts_register_block() {
+function custom_flex_posts_register_block() {
 	wp_register_script(
 		'flex-posts',
 		plugins_url( 'block.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-element', 'wp-i18n' ),
-		FLEX_POSTS_VERSION,
+		CUSTOM_FLEX_POSTS_VERSION,
 		true
 	);
 
@@ -45,7 +45,7 @@ function flex_posts_register_block() {
 
 	wp_localize_script(
 		'flex-posts',
-		'flex_posts',
+		'custom_flex_posts',
 		array(
 			'categories' => $categories,
 		)
@@ -55,9 +55,9 @@ function flex_posts_register_block() {
 		'flex-posts/list',
 		array(
 			'editor_script'   => 'flex-posts',
-			'render_callback' => 'flex_posts_render_block',
+			'render_callback' => 'custom_flex_posts_render_block',
 			'attributes'      => apply_filters(
-				'flex_posts_attributes',
+				'custom_flex_posts_attributes',
 				array(
 					'layout'          => array(
 						'type'    => 'number',
@@ -116,14 +116,14 @@ function flex_posts_register_block() {
 		)
 	);
 }
-add_action( 'init', 'flex_posts_register_block' );
+add_action( 'init', 'custom_flex_posts_register_block' );
 
 /**
  * Render block
  *
  * @param array $attributes Attributes.
  */
-function flex_posts_render_block( $attributes ) {
+function custom_flex_posts_render_block( $attributes ) {
 	ob_start();
 	$class = '';
 	if ( ! empty( $attributes['className'] ) ) {
@@ -131,7 +131,7 @@ function flex_posts_render_block( $attributes ) {
 	}
 	echo '<section class="widget widget_flex-posts-list' . esc_attr( $class ) . '">';
 	if ( ! empty( $attributes['title'] ) ) {
-		$title        = apply_filters( 'flex_posts_block_title', $attributes['title'], $attributes, 'flex-posts-list' );
+		$title        = apply_filters( 'custom_flex_posts_block_title', $attributes['title'], $attributes, 'flex-posts-list' );
 		$allowed_html = array(
 			'a'    => array(
 				'href'  => array(),
@@ -145,7 +145,7 @@ function flex_posts_render_block( $attributes ) {
 		echo '<h2 class="widget-title">' . wp_kses( $title, $allowed_html ) . '</h2>';
 	}
 
-	flex_posts_display( $attributes );
+	custom_flex_posts_display( $attributes );
 
 	echo '</section>';
 	$display = ob_get_clean();
