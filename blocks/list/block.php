@@ -43,11 +43,31 @@ function custom_flex_posts_register_block() {
 		);
 	}
 
+	$post_types[] = array(
+		'label' => __( 'Posts', 'custom-flex-posts' ),
+		'value' => 'post',
+	);
+
+	$get_post_types_args = array(
+		'public' => true,
+		'_builtin' => false,
+	);
+
+	$get_post_types = get_post_types( $get_post_types_args, 'names' );
+
+	foreach ( $get_post_types as $post_type ) {
+		$post_types[] = array(
+			'label' => $post_type,
+			'value' => $post_type,
+		);
+	}
+
 	wp_localize_script(
 		'custom-flex-posts',
 		'custom_flex_posts',
 		array(
 			'categories' => $categories,
+			'post_types' => $post_types,
 		)
 	);
 

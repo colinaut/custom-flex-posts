@@ -81,11 +81,11 @@
 							initialOpen: true
 						},
 						el(
-							components.TextControl,
+							components.SelectControl,
 							{
-								type: 'text',
-								label: __( 'Post Type', 'custom-flex-posts' ),
+								label: 'Post Type',
 								value: attr.post_type,
+								options: custom_flex_posts.post_types,
 								onChange: function( val ) {
 									props.setAttributes( { post_type: val } )
 								}
