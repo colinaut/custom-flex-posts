@@ -1,6 +1,6 @@
 <?php
 /**
- * Flex Posts List Block
+ * Custom Flex Posts List Block
  *
  * @package Custom Flex Posts
  */
@@ -129,7 +129,7 @@ function custom_flex_posts_render_block( $attributes ) {
 	if ( ! empty( $attributes['className'] ) ) {
 		$class = ' ' . $attributes['className'];
 	}
-	echo '<section class="widget widget_flex-posts-list' . esc_attr( $class ) . '">';
+	echo '<section class="widget widget_custom-flex-posts-list' . esc_attr( $class ) . '">';
 	if ( ! empty( $attributes['title'] ) ) {
 		$title        = apply_filters( 'custom_flex_posts_block_title', $attributes['title'], $attributes, 'custom-flex-posts-list' );
 		$allowed_html = array(

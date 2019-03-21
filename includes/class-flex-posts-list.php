@@ -1,6 +1,6 @@
 <?php
 /**
- * Flex Posts List Widget
+ * Custom Flex Posts List Widget
  *
  * @package Custom Flex Posts
  */
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Flex Posts List widget class
+ * Custom Flex Posts List widget class
  */
 class Custom_Flex_Posts_List extends Custom_Flex_Posts_Widget {
 

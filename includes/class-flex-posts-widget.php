@@ -164,47 +164,47 @@ class Custom_Flex_Posts_Widget extends WP_Widget {
 	public function get_fields() {
 		$fields['layout'] = array(
 			'type'    => 'select',
-			'label'   => esc_html__( 'Layout', 'flex-posts' ),
+			'label'   => esc_html__( 'Layout', 'custom-flex-posts' ),
 			'options' => array(
-				1 => esc_html__( 'Layout 1', 'flex-posts' ),
-				2 => esc_html__( 'Layout 2', 'flex-posts' ),
-				3 => esc_html__( 'Layout 3', 'flex-posts' ),
-				4 => esc_html__( 'Layout 4', 'flex-posts' ),
+				1 => esc_html__( 'Layout 1', 'custom-flex-posts' ),
+				2 => esc_html__( 'Layout 2', 'custom-flex-posts' ),
+				3 => esc_html__( 'Layout 3', 'custom-flex-posts' ),
+				4 => esc_html__( 'Layout 4', 'custom-flex-posts' ),
 			),
 			'default' => 1,
 		);
 
 		$fields['title'] = array(
 			'type'  => 'text',
-			'label' => esc_html__( 'Title', 'flex-posts' ),
+			'label' => esc_html__( 'Title', 'custom-flex-posts' ),
 		);
 
 		$fields['cat'] = array(
 			'type'  => 'category',
-			'label' => esc_html__( 'Filter by category', 'flex-posts' ),
+			'label' => esc_html__( 'Filter by category', 'custom-flex-posts' ),
 		);
 
 		$fields['tag'] = array(
 			'type'  => 'text',
-			'label' => esc_html__( 'Filter by tag(s)', 'flex-posts' ),
+			'label' => esc_html__( 'Filter by tag(s)', 'custom-flex-posts' ),
 		);
 
 		$fields['order_by'] = array(
 			'type'    => 'select',
-			'label'   => esc_html__( 'Order by', 'flex-posts' ),
+			'label'   => esc_html__( 'Order by', 'custom-flex-posts' ),
 			'options' => array(
-				'newest'   => esc_html__( 'Newest', 'flex-posts' ),
-				'oldest'   => esc_html__( 'Oldest', 'flex-posts' ),
-				'comments' => esc_html__( 'Most commented', 'flex-posts' ),
-				'title'    => esc_html__( 'Alphabetical', 'flex-posts' ),
-				'random'   => esc_html__( 'Random', 'flex-posts' ),
+				'newest'   => esc_html__( 'Newest', 'custom-flex-posts' ),
+				'oldest'   => esc_html__( 'Oldest', 'custom-flex-posts' ),
+				'comments' => esc_html__( 'Most commented', 'custom-flex-posts' ),
+				'title'    => esc_html__( 'Alphabetical', 'custom-flex-posts' ),
+				'random'   => esc_html__( 'Random', 'custom-flex-posts' ),
 			),
 			'default' => 'newest',
 		);
 
 		$fields['number'] = array(
 			'type'    => 'number',
-			'label'   => esc_html__( 'Number of posts to show', 'flex-posts' ),
+			'label'   => esc_html__( 'Number of posts to show', 'custom-flex-posts' ),
 			'default' => 4,
 			'min'     => 1,
 			'max'     => 100,
@@ -212,7 +212,7 @@ class Custom_Flex_Posts_Widget extends WP_Widget {
 
 		$fields['skip'] = array(
 			'type'    => 'number',
-			'label'   => esc_html__( 'Number of posts to skip', 'flex-posts' ),
+			'label'   => esc_html__( 'Number of posts to skip', 'custom-flex-posts' ),
 			'default' => 0,
 			'min'     => 0,
 			'max'     => 100,
@@ -220,31 +220,31 @@ class Custom_Flex_Posts_Widget extends WP_Widget {
 
 		$fields['show_categories'] = array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Show categories', 'flex-posts' ),
+			'label'   => esc_html__( 'Show categories', 'custom-flex-posts' ),
 			'default' => 0,
 		);
 
 		$fields['show_author'] = array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Show author', 'flex-posts' ),
+			'label'   => esc_html__( 'Show author', 'custom-flex-posts' ),
 			'default' => 0,
 		);
 
 		$fields['show_date'] = array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Show date', 'flex-posts' ),
+			'label'   => esc_html__( 'Show date', 'custom-flex-posts' ),
 			'default' => 1,
 		);
 
 		$fields['show_comments'] = array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Show comments number', 'flex-posts' ),
+			'label'   => esc_html__( 'Show comments number', 'custom-flex-posts' ),
 			'default' => 1,
 		);
 
 		$fields['show_excerpt'] = array(
 			'type'    => 'checkbox',
-			'label'   => esc_html__( 'Show excerpt', 'flex-posts' ),
+			'label'   => esc_html__( 'Show excerpt', 'custom-flex-posts' ),
 			'default' => 0,
 		);
 
