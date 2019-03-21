@@ -145,6 +145,11 @@ msgstr ""
 msgid "Show comments number"
 msgstr ""
 
+#: includes/class-flex-posts-widget.php:241
+#: blocks/list/block.js:202
+msgid "Show image"
+msgstr ""
+
 #: includes/class-flex-posts-widget.php:247
 #: blocks/list/block.js:212
 msgid "Show excerpt"

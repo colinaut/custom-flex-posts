@@ -17,9 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php $query->the_post(); ?>
 
 		<div class="cfp-post cfp-flex">
-			<div class="cfp-media">
-				<?php custom_flex_posts_thumbnail( $medium_size ); ?>
-			</div>
+			<?php if ( ! empty( $instance['show_excerpt'] ) ) : ?>
+				<div class="cfp-media">
+					<?php custom_flex_posts_thumbnail( $medium_size ); ?>
+				</div>
+			<?php endif; ?>
 			<div class="cfp-body">
 				<?php if ( ! empty( $instance['show_categories'] ) ) : ?>
 					<?php custom_flex_posts_categories_meta(); ?>

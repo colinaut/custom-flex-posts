@@ -58,6 +58,10 @@
 				type: 'boolean',
 				default: true
 			},
+			show_image: {
+				type: 'boolean',
+				default: true
+			},
 			show_excerpt: {
 				type: 'boolean',
 				default: false
@@ -218,6 +222,16 @@
 								checked: attr.show_comments,
 								onChange: function( val ) {
 									props.setAttributes( { show_comments: val } )
+								}
+							}
+						),
+						el(
+							components.CheckboxControl,
+							{
+								label: __( 'Show image', 'custom-flex-posts' ),
+								checked: attr.show_image,
+								onChange: function( val ) {
+									props.setAttributes( { show_image: val } )
 								}
 							}
 						),
