@@ -1,8 +1,7 @@
-# Copyright (C) 2019 Tajam
-# This file is distributed under the same license as the Flex Posts - Widget and Gutenberg Block plugin.
+# This file is distributed under the same license as the Custom Flex Posts - Widget and Gutenberg Block plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Flex Posts - Widget and Gutenberg Block 1.2.0\n"
+"Project-Id-Version: Custom Flex Posts - Widget and Gutenberg Block 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/flex-posts\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,19 +18,19 @@ msgid "Flex Posts - Widget and Gutenberg Block"
 msgstr ""
 
 #. Plugin URI of the plugin
-msgid "https://tajam.id/flex-posts/"
+msgid ""
 msgstr ""
 
 #. Description of the plugin
-msgid "A widget to display posts with thumbnails in various layouts for any widget area."
+msgid "A widget to display posts and custom post types with thumbnails in various layouts for any widget area."
 msgstr ""
 
 #. Author of the plugin
-msgid "Tajam"
+msgid "Colin Fahrion"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://tajam.id/"
+msgid ""
 msgstr ""
 
 #: blocks/list/block.php:33
@@ -40,7 +39,7 @@ msgstr ""
 
 #: includes/class-flex-posts-list.php:23
 #: blocks/list/block.js:6
-msgid "Flex Posts"
+msgid "Custom Flex Posts"
 msgstr ""
 
 #: includes/class-flex-posts-list.php:25
@@ -152,5 +151,5 @@ msgid "Show excerpt"
 msgstr ""
 
 #: blocks/list/block.js:76
-msgid "Flex Posts Settings"
+msgid "Custom Flex Posts Settings"
 msgstr ""

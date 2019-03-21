@@ -12,17 +12,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Flex Posts List widget class
  */
-class Flex_Posts_List extends Flex_Posts_Widget {
+class Custom_Flex_Posts_List extends Custom_Flex_Posts_Widget {
 
 	/**
 	 * Set base ID, name & options
 	 */
 	public function __construct() {
 		parent::__construct(
-			'flex-posts-list',
-			esc_html__( 'Flex Posts', 'flex-posts' ),
+			'custom-flex-posts-list',
+			esc_html__( 'Custom Flex Posts', 'custom-flex-posts' ),
 			array(
-				'description' => esc_html__( 'Displays posts list.', 'flex-posts' ),
+				'description' => esc_html__( 'Displays posts list.', 'custom-flex-posts' ),
 			)
 		);
 

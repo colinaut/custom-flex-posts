@@ -14,8 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function custom_flex_posts_register_style() {
 	wp_register_style(
-		'flex-posts',
-		CUSTOM_FLEX_POSTS_URL . '/public/css/flex-posts.css',
+		'custom-flex-posts',
+		CUSTOM_FLEX_POSTS_URL . '/public/css/custom-flex-posts.css',
 		array(),
 		CUSTOM_FLEX_POSTS_VERSION
 	);
@@ -90,7 +90,7 @@ function custom_flex_posts_display( $instance ) {
 	$medium_size    = apply_filters( 'custom_flex_posts_medium_size', '400x250-crop', $instance );
 	$thumbnail_size = apply_filters( 'custom_flex_posts_thumbnail_size', 'thumbnail', $instance );
 
-	$file     = 'flex-posts-list-' . $layout . '.php';
+	$file     = 'custom-flex-posts-list-' . $layout . '.php';
 	$template = locate_template( $file );
 	if ( empty( $template ) ) {
 		$template = CUSTOM_FLEX_POSTS_DIR . 'public/' . $file;

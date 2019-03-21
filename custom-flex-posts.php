@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom Flex Posts - Widget and Gutenberg Block
  * Plugin URI:  
- * Description: A widget to display posts with thumbnails in various layouts for any widget area.
+ * Description: A widget to display posts adn custom post types with thumbnails in various layouts for any widget area.
  * Version:     1.0.0
  * Author:      Colin Fahrion
  * License:     GPL-2.0+
@@ -62,7 +62,7 @@ if ( function_exists( 'register_block_type' ) ) {
  * Register custom widget
  */
 function custom_flex_posts_register_widgets() {
-	register_widget( 'Flex_Posts_List' );
+	register_widget( 'Custom_Flex_Posts_List' );
 }
 add_action( 'widgets_init', 'custom_flex_posts_register_widgets' );
 
@@ -71,7 +71,7 @@ add_action( 'widgets_init', 'custom_flex_posts_register_widgets' );
  */
 function custom_flex_posts_load_textdomain() {
 	load_plugin_textdomain(
-		'flex-posts',
+		'custom-flex-posts',
 		false,
 		CUSTOM_FLEX_POSTS_DIR . 'languages/'
 	);

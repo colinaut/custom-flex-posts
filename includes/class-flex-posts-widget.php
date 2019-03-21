@@ -1,8 +1,8 @@
 <?php
 /**
- * Flex Posts Widget
+ * Custom Flex Posts Widget
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,15 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Flex Posts widget class
+ * Custom Flex Posts widget class
  */
-class Flex_Posts_Widget extends WP_Widget {
+class Custom_Flex_Posts_Widget extends WP_Widget {
 
 	/**
 	 * Register the stylesheets for widget.
 	 */
 	public function enqueue() {
-		wp_enqueue_style( 'flex-posts' );
+		wp_enqueue_style( 'custom-flex-posts' );
 	}
 
 	/**
