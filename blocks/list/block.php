@@ -129,7 +129,7 @@ function custom_flex_posts_register_block() {
 					),
 					'show_image'     => array(
 						'type'    => 'boolean',
-						'default' => false,
+						'default' => true,
 					),
 					'show_excerpt'    => array(
 						'type'    => 'boolean',
