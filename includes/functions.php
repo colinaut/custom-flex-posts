@@ -49,6 +49,12 @@ function custom_flex_posts_get_query_args( $instance ) {
 		}
 	}
 
+	if ( ! empty( $instance['post_type'] ) ) {
+		$args['post_type'] = $instance['post_type'];
+	} else {
+		$args['post_type'] = 'post';
+	}
+
 	if ( ! empty( $instance['cat'] ) ) {
 		$args['cat'] = absint( $instance['cat'] );
 	}

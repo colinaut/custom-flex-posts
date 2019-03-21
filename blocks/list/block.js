@@ -10,6 +10,10 @@
 		category: 'widgets',
 
 		attributes: {
+			post_type: {
+				type: 'string',
+				default: "post"
+			},
 			layout: {
 				type: 'number',
 				default: 1
@@ -76,6 +80,17 @@
 							title: __( 'Custom Flex Posts Settings', 'custom-flex-posts' ),
 							initialOpen: true
 						},
+						el(
+							components.TextControl,
+							{
+								type: 'text',
+								label: __( 'Post Type', 'custom-flex-posts' ),
+								value: attr.post_type,
+								onChange: function( val ) {
+									props.setAttributes( { post_type: val } )
+								}
+							}
+						),
 						el(
 							components.SelectControl,
 							{

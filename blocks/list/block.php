@@ -59,6 +59,10 @@ function custom_flex_posts_register_block() {
 			'attributes'      => apply_filters(
 				'custom_flex_posts_attributes',
 				array(
+					'post_type'          => array(
+						'type'    => 'string',
+						'default' => 'post',
+					),
 					'layout'          => array(
 						'type'    => 'number',
 						'default' => 1,
