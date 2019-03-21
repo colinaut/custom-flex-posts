@@ -2,7 +2,7 @@
 /**
  * Form helper functions
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

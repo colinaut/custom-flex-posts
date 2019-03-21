@@ -1,8 +1,8 @@
 <?php
 /**
- * Flex posts widget template: List 1
+ * Custom Flex posts widget template: List 1
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,39 +10,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<div class="fp-row fp-list-1 fp-flex">
+<div class="cfp-row cfp-list-1 cfp-flex">
 
 	<?php while ( $query->have_posts() ) : ?>
 
 		<?php $query->the_post(); ?>
 
-		<div class="fp-col fp-post">
-			<div class="fp-flex">
-				<div class="fp-media">
+		<div class="cfp-col cfp-post">
+			<div class="cfp-flex">
+				<div class="cfp-media">
 					<?php custom_flex_posts_thumbnail( $thumbnail_size ); ?>
 				</div>
-				<div class="fp-body">
+				<div class="cfp-body">
 					<?php if ( ! empty( $instance['show_categories'] ) ) : ?>
 						<?php custom_flex_posts_categories_meta(); ?>
 					<?php endif; ?>
 
-					<h4 class="fp-title">
+					<h4 class="cfp-title">
 						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 					</h4>
 
-					<div class="fp-meta">
+					<div class="cfp-meta">
 						<?php custom_flex_posts_meta( $instance ); ?>
 					</div>
 				</div>
 			</div>
 			<?php if ( ! empty( $instance['show_excerpt'] ) ) : ?>
-				<div class="fp-excerpt"><?php custom_flex_posts_excerpt(); ?></div>
+				<div class="cfp-excerpt"><?php custom_flex_posts_excerpt(); ?></div>
 			<?php endif; ?>
 		</div>
 
 	<?php endwhile; ?>
 
-	<div class="fp-col"></div>
-	<div class="fp-col"></div>
+	<div class="cfp-col"></div>
+	<div class="cfp-col"></div>
 
 </div>

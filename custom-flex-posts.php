@@ -10,7 +10,7 @@
  * Text Domain: custom-flex-posts
  * Domain Path: /languages
  *
- * Custome Flex Posts is free software based on Flex posts by Tajam https://tajam.id/
+ * Custome Flex Posts is free software based on Flex Posts by Tajam https://tajam.id/
  * You can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or

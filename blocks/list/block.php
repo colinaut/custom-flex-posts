@@ -2,7 +2,7 @@
 /**
  * Flex Posts List Block
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

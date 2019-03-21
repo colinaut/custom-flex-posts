@@ -2,7 +2,7 @@
 /**
  * Functions used in template files
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,7 +38,7 @@ if ( ! function_exists( 'custom_flex_posts_author_meta' ) ) {
 	 */
 	function custom_flex_posts_author_meta() {
 		?>
-		<span class="fp-author">
+		<span class="cfp-author">
 			<span class="author vcard">
 				<a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
 					<?php the_author(); ?>
@@ -55,7 +55,7 @@ if ( ! function_exists( 'custom_flex_posts_date_meta' ) ) {
 	 */
 	function custom_flex_posts_date_meta() {
 		?>
-		<span class="fp-date">
+		<span class="cfp-date">
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<time class="entry-date published" datetime="<?php the_date( 'c' ); ?>">
 					<?php echo esc_html( get_the_date() ); ?>
@@ -72,7 +72,7 @@ if ( ! function_exists( 'custom_flex_posts_comments_meta' ) ) {
 	 */
 	function custom_flex_posts_comments_meta() {
 		?>
-		<span class="fp-comments">
+		<span class="cfp-comments">
 			<?php comments_popup_link(); ?>
 		</span>
 		<?php
@@ -85,7 +85,7 @@ if ( ! function_exists( 'custom_flex_posts_categories_meta' ) ) {
 	 */
 	function custom_flex_posts_categories_meta() {
 		?>
-		<span class="fp-categories">
+		<span class="cfp-categories">
 			<?php the_category( ', ' ); ?>
 		</span>
 		<?php
@@ -101,7 +101,7 @@ if ( ! function_exists( 'custom_flex_posts_thumbnail' ) ) {
 	function custom_flex_posts_thumbnail( $size ) {
 		$default_image = apply_filters( 'custom_flex_posts_default_image', CUSTOM_FLEX_POSTS_URL . '/public/images/default.png' );
 		?>
-		<a class="fp-thumbnail" href="<?php the_permalink(); ?>">
+		<a class="cfp-thumbnail" href="<?php the_permalink(); ?>">
 			<?php if ( has_post_thumbnail() ) : ?>
 				<?php the_post_thumbnail( $size ); ?>
 			<?php else : ?>

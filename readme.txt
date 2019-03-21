@@ -1,6 +1,5 @@
-=== Flex Posts - Widget and Gutenberg Block ===
-Contributors: tajam
-Donate link: https://tajam.id/
+=== Custom Flex Posts - Widget and Gutenberg Block ===
+Contributors: Colin Fahrion
 Tags: category posts, responsive, magazine, news, grid, list, tiles, flexbox, recent posts, latest posts
 Requires at least: 4.6
 Tested up to: 5.1
@@ -8,11 +7,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A widget to display posts with thumbnails in various layouts. Fits nicely in any widget area size.
+A widget to display posts and custom post types with thumbnails in various layouts. Fits nicely in any widget area size.
 
 == Description ==
 
-Flex Posts is a widget to display posts in various different layouts. It is useful for a news site where you need to display a lot of posts in a page.
+Custom Flex Posts is a widget to display posts and custom post stype in various different layouts. It is useful for a news site where you need to display a lot of posts in a page. It is based on Flex Posts by Tajam https://tajam.id/
 
 The widget is responsive so you can place it in any widget area. The widget content will adapt based on the width of its container. In a narrow area like standard sidebar, posts will be displayed vertically, but in a wider area, posts will be displayed in 2 or 3 columns depends on the container's width.
 
@@ -38,7 +37,7 @@ Since version 1.1.0, Flex Posts also includes a gutenberg block. You can add the
 
 = Demo =
 
-Please visit the live demo here: [Flex Posts Demo](https://tajam.id/flex-posts-demo/)
+Please visit the live demo of the original FLex Posts plugin here: [Flex Posts Demo](https://tajam.id/flex-posts-demo/)
 
 = Requirements =
 
@@ -67,25 +66,8 @@ This plugin has been tested and works with at least PHP 5.3 installed in your en
 
 == Changelog ==
 
-= 1.2.0 =
-* Added a new layout (Layout 4)
-* Added filter by tags
-* Added order by random
-* Added a filter hook to modify block title
-* Updated image size filter hook
-* Updated row class & styling (changed fp-posts to fp-row)
-
-= 1.1.1 =
-* Fixed excerpt display function
-
-= 1.1.0 =
-* Added gutenberg block
-* Fixed some style issues
-
-= 1.0.1 =
-* Fixed compatibility with old php versions
-
 = 1.0.0 =
-* Initial Release.
+* Changed to be titled Custom Post types and not interfer with original plugin
+* Upgraded to allow for custom post types
 
 == Upgrade Notice ==

@@ -2,7 +2,7 @@
 /**
  * Functions used in widgets and blocks
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -2,7 +2,7 @@
 /**
  * Flex Posts List Widget
  *
- * @package Flex Posts
+ * @package Custom Flex Posts
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
